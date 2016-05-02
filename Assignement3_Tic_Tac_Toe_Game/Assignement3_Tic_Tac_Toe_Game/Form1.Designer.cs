@@ -54,7 +54,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(329, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(354, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,6 +80,7 @@
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
             this.newGameToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.newGameToolStripMenuItem.Text = "New Game";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -98,7 +99,7 @@
             // A1
             // 
             this.A1.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A1.Location = new System.Drawing.Point(36, 47);
+            this.A1.Location = new System.Drawing.Point(37, 47);
             this.A1.Name = "A1";
             this.A1.Size = new System.Drawing.Size(90, 90);
             this.A1.TabIndex = 1;
@@ -108,7 +109,7 @@
             // A2
             // 
             this.A2.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A2.Location = new System.Drawing.Point(117, 47);
+            this.A2.Location = new System.Drawing.Point(133, 47);
             this.A2.Name = "A2";
             this.A2.Size = new System.Drawing.Size(90, 90);
             this.A2.TabIndex = 2;
@@ -118,7 +119,7 @@
             // A3
             // 
             this.A3.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A3.Location = new System.Drawing.Point(198, 47);
+            this.A3.Location = new System.Drawing.Point(229, 47);
             this.A3.Name = "A3";
             this.A3.Size = new System.Drawing.Size(90, 90);
             this.A3.TabIndex = 3;
@@ -128,7 +129,7 @@
             // B1
             // 
             this.B1.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B1.Location = new System.Drawing.Point(36, 128);
+            this.B1.Location = new System.Drawing.Point(37, 143);
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(90, 90);
             this.B1.TabIndex = 4;
@@ -138,7 +139,7 @@
             // B2
             // 
             this.B2.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B2.Location = new System.Drawing.Point(117, 128);
+            this.B2.Location = new System.Drawing.Point(133, 143);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(90, 90);
             this.B2.TabIndex = 5;
@@ -148,7 +149,7 @@
             // B3
             // 
             this.B3.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B3.Location = new System.Drawing.Point(198, 128);
+            this.B3.Location = new System.Drawing.Point(229, 143);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(90, 90);
             this.B3.TabIndex = 6;
@@ -158,7 +159,7 @@
             // C1
             // 
             this.C1.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C1.Location = new System.Drawing.Point(36, 209);
+            this.C1.Location = new System.Drawing.Point(37, 239);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(90, 90);
             this.C1.TabIndex = 7;
@@ -168,7 +169,7 @@
             // C2
             // 
             this.C2.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C2.Location = new System.Drawing.Point(117, 209);
+            this.C2.Location = new System.Drawing.Point(133, 239);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(90, 90);
             this.C2.TabIndex = 8;
@@ -178,7 +179,7 @@
             // C3
             // 
             this.C3.Font = new System.Drawing.Font("Segoe Script", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C3.Location = new System.Drawing.Point(198, 209);
+            this.C3.Location = new System.Drawing.Point(229, 239);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(90, 90);
             this.C3.TabIndex = 9;
@@ -189,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 324);
+            this.ClientSize = new System.Drawing.Size(354, 365);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
@@ -205,7 +206,7 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tic Tac Toe";
+            this.Text = "Tic Tac Toe ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

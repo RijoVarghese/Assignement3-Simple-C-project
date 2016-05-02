@@ -24,7 +24,7 @@ namespace Assignement3_Tic_Tac_Toe_Game
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("By Rijo Varghese", "About Assignement3 Tic Tac Toe");
+            MessageBox.Show("Tic Tac Toe \nby \n Rijo Varghese \n HU ID-156754", "About Assignement3");
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,14 +42,15 @@ namespace Assignement3_Tic_Tac_Toe_Game
 
             turn = !turn;
             clickturn.Enabled = false;
-
+            count_turn++;
             checkforwinner();
         }
 
         private void checkforwinner()
         {
             //check game winner
-            bool we_have_a_winner = fales;
+            bool we_have_a_winner = false;
+            //hozizantal check
             if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled))
                 we_have_a_winner = true;
             if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
@@ -57,16 +58,68 @@ namespace Assignement3_Tic_Tac_Toe_Game
             if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                 we_have_a_winner = true;
 
+            //vertical check
+            if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
+                we_have_a_winner = true;
+            if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B2.Enabled))
+                we_have_a_winner = true;
+            if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!A3.Enabled))
+                we_have_a_winner = true;
+
+            //diagonal check
+            if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
+                we_have_a_winner = true;
+            if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
+                we_have_a_winner = true;
+            
             if (we_have_a_winner)
             {
+                disablegameifwinner();
                 string winner = "";
                 if (turn)
                     winner = "O";
                 else
                     winner = "X";
                 //Box to display winner
-                MessageBox.Show(winner + "Wins!", "Yay!");
+                MessageBox.Show(winner + " - Wins!", "Hurry!");
             }
+            //check for draw
+            else
+            {
+                if (count_turn == 9)
+                    MessageBox.Show("Its Draw!", "Try again!");
+            }
+        }
+
+        private void disablegameifwinner()
+        {
+            try
+            {
+                foreach (Control clicktuncheck in Controls)
+                {
+                    Button clickturn = (Button)clicktuncheck;
+                    clickturn.Enabled = false;
+                }
+            }
+            catch { }
+            
+
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            turn = true;
+            count_turn = 0;
+            try
+            {
+                foreach (Control clicktuncheck in Controls)
+                {
+                    Button clickturn = (Button)clicktuncheck;
+                    clickturn.Enabled = true;
+                    clickturn.Text = "";
+                }
+            }
+            catch { }
         }
     }
 }
